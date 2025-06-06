@@ -1,0 +1,83 @@
+/* assets/css/editor-style.css */
+.wp-block-group.car-top-bar {
+    background: var(--wp--preset--color--topbar);
+    padding: 10px;
+}
+
+.wp-block-column.car-container-logo {
+    background: var(--wp--preset--color--backmenu);
+    height: 100px;
+    padding: 10px;
+}
+
+.wp-block-group.car-footer {
+    background: var(--wp--preset--color--backmenu);
+    color: var(--wp--preset--color--colormenu);
+    padding: 10px;
+}
+
+.wp-block-heading.car-footer-heading {
+    background: var(--wp--preset--color--backmenu);
+    color: var(--wp--preset--color--colormenu);
+    font-size: 18px;
+}
+
+.car-footer-copy {
+    background: var(--wp--preset--color--backmenu) !important;
+    color: var(--wp--preset--color--colormenu) !important;
+    font-size: 18px;
+}
+
+.car-dealer-show-footer-tagline {
+    margin-top: 10px;
+    background: var(--wp--preset--color--backmenu) !important;
+    color: var(--wp--preset--color--colormenu) !important;
+    font-size: 18px;
+}
+
+.car-dealer-show-footer-first {
+    padding-right: 20px !important;
+    padding-bottom: 20px;
+}
+
+.car-footer-copy a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.car-footer-copy a:hover {
+    color: var(--wp--preset--color--link-hover) !important;
+}
+
+.wp-block-column.car-container-menu {
+    display: flex;
+    background: var(--wp--preset--color--backmenu);
+    color: var(--wp--preset--color--colormenu);
+    height: 100px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.wp-block-column.car-container-logo {
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+    display: flex;
+    background: var(--wp--preset--color--backmenu);
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.wp-block-column.car-container-left-of-menu {
+    clip-path: polygon(33% 0, 100% 0, 100% 100%, 0 100%);
+    display: flex;
+    background: var(--wp--preset--color--backmenu);
+    height: 100px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.car-column-shape-effect {
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+    background-color: var(--wp--preset--color--backmenu);
+}

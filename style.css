@@ -1,0 +1,236 @@
+/*
+Theme Name: Car-Dealer-Show
+Theme URI: http://cardealerthemes.com/
+Author: sminozzi
+Author URI: http://billminozzi.com/
+Description: Block Car Dealer Theme with Plugin to Manage Car List
+Requires at least: 6.6
+Tested up to: 6.8
+Requires PHP: 7.0
+Version: 1.23
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: car-dealer-show
+Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready, wide-blocks, block-styles, style-variations, blog, portfolio, news
+*/
+.wp-block-navigation .has-child .wp-block-navigation__submenu-container>.wp-block-navigation-item>.wp-block-navigation-item__content {
+    display: flex;
+    flex-grow: 1;
+    background: var(--wp--preset--color--backmenu);
+    color: var(--wp--preset--color--colormenu);
+}
+
+.wp-block-image.vertical-aligmiddle img {
+    vertical-align: middle;
+}
+
+/* Adjust visibility on hover */
+.navigation__item:hover .navigation__submenu {
+    display: block;
+    /* Show submenu on hover */
+}
+
+.hr-bill {
+    border: none;
+    height: 1px;
+    background-color: currentColor;
+    margin: 0;
+    padding: 0;
+}
+
+.wp-block-group.car-top-bar {
+    background: var(--wp--preset--color--topbar);
+    padding: 10px;
+}
+
+.wp-block-column.car-container-logo {
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+    display: flex;
+    background: var(--wp--preset--color--backmenu);
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.wp-block-column.car-container-logo .wp-block-image img {
+    margin-left: -10px;
+}
+
+.wp-block-column.car-container-menu {
+    display: flex;
+    background: var(--wp--preset--color--backmenu);
+    min-height: 100%;
+    padding: 10px;
+    justify-content: center;
+}
+
+.wp-block-columns.header-columns {
+    display: flex;
+    gap: 0 !important;
+}
+
+.wp-block-columns.is-not-stacked-on-mobile.bill-section-062 {
+    position: relative;
+}
+
+.car-column-shape-effect .wp-block-group {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 30%;
+    width: 10%;
+    background-color: var(--wp--preset--color--backmenu);
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+    z-index: 0;
+}
+
+.wp-block-column.car-container-logo,
+.wp-block-column.car-container-menu {
+    position: relative;
+    z-index: 1;
+}
+
+.wp-block-group.car-footer {
+    background: var(--wp--preset--color--backmenu);
+    color: var(--wp--preset--color--colormenu);
+    padding: 10px;
+}
+
+.wp-block-heading.car-footer-heading {
+    background: var(--wp--preset--color--backmenu);
+    color: var(--wp--preset--color--colormenu);
+    font-size: 18px;
+}
+
+.car-footer-copy {
+    background: var(--wp--preset--color--backmenu) !important;
+    color: var(--wp--preset--color--colormenu) !important;
+    font-size: 18px;
+}
+
+.car-dealer-show-footer-tagline {
+    margin-top: 10px;
+    background: var(--wp--preset--color--backmenu) !important;
+    color: var(--wp--preset--color--colormenu) !important;
+    font-size: 18px;
+}
+
+.car-dealer-show-footer-first {
+    padding-right: 20px !important;
+    padding-bottom: 20px;
+}
+
+.car-footer-copy a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.car-footer-copy a:hover {
+    color: var(--wp--preset--color--link-hover) !important;
+}
+
+.mobile-aligncenter {
+    width: auto;
+}
+
+.car-about-us {
+    background: rgb(194, 192, 192);
+}
+
+@media (max-width: 900px) {
+
+    .wp-block-column.car-container-logo .wp-block-image img {
+        margin-left: 0;
+    }
+
+    .wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column {
+        flex-basis: 100% !important;
+    }
+
+    html.has-modal-open .wp-site-blocks::before {
+        background-color: transparent !important;
+        opacity: 0 !important;
+        pointer-events: none;
+    }
+
+    .wp-block-navigation__responsive-container:not(.is-menu-open.is-menu-open) {
+        background: var(--wp--preset--color--backmenu);
+        color: var(--wp--preset--color--colormenu);
+    }
+
+    .wp-block-navigation__responsive-dialog {
+        background: var(--wp--preset--color--backmenu);
+        color: var(--wp--preset--color--colormenu);
+        padding: 10px;
+    }
+
+    .wp-block-navigation__link {
+        color: #fff;
+    }
+
+    .wp-block-navigation__link:hover {
+        color: #ff0;
+    }
+
+    .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container.is-menu-open {
+        background: transparent !important;
+        height: auto;
+        max-width: 70%;
+    }
+
+    .container-logo {
+        overflow: hidden;
+    }
+
+    .mobile-aligncenter {
+        clip-path: none;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+    }
+
+    .wp-block-columns.is-not-stacked-on-mobile.bill-section-062 {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .wp-block-columns.is-not-stacked-on-mobile.bill-section-062 .wp-block-column.car-column-shape-effect {
+        display: none !important;
+    }
+
+    .wp-block-columns.is-not-stacked-on-mobile.bill-section-062 .wp-block-column.car-container-logo {
+        flex-basis: 75% !important;
+        width: 75% !important;
+        max-width: 75% !important;
+        clip-path: none;
+        height: 100px;
+        padding: 0px;
+        margin-top: 1px;
+        box-sizing: border-box;
+    }
+
+    .wp-block-columns.is-not-stacked-on-mobile.bill-section-062 .wp-block-column.car-container-menu {
+        flex-basis: 25% !important;
+        width: 25% !important;
+        max-width: 25% !important;
+        clip-path: none;
+        height: 100px;
+        padding: 0px;
+        margin-top: 1px;
+        box-sizing: border-box;
+    }
+
+    .wp-block-navigation__responsive-container .wp-block-navigation__responsive-container-content {
+        display: none;
+    }
+
+    .wp-block-navigation__responsive-container-open:not(.always-shown) {
+        display: block;
+    }
+
+    body .wp-block-navigation {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+}
