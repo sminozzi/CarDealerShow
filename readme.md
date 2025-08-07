@@ -18,7 +18,20 @@ The theme is fully responsive, retina-ready, and optimized for fast loading acro
 
 Car Dealer Show is compatible with Gutenberg, Elementor, and other popular page builders, giving you the freedom to design your site with your preferred tools.
 
-When paired with the optional (and free) Car Dealer plugin, you unlock powerful listing management features. Dealers gain full control over their inventory, with support for unlimited custom fields, vehicle categories, image galleries, and more. Advanced search filters offer a tailored experience for users to quickly find the cars they’re looking for.
+Unlock complete control over your vehicle inventory with the optional FREE Car Dealer plugin.
+
+This powerful tool empowers dealers to add unlimited custom fields, ensuring every listing perfectly matches your inventory.
+
+Manage your entire database through a user-friendly interface—no coding required.
+
+This backend control translates into a superior front-end experience for your customers, who can use:
+
+* advanced search filters
+* a price range slider
+* professional display templates (including list and gallery views)
+* to find exactly what they’re looking for.
+
+Avoid the time-consuming and error-prone process of manual HTML editing and start selling vehicles quickly and professionally.
 
 Whether you're an independent dealer or part of a larger automotive network, Car Dealer Show offers:
 
@@ -26,7 +39,14 @@ Seamless Full Site Editing support
 
 Lightweight, SEO-optimized code
 
-Ready-to-use block patterns for listings and homepage layouts
+Build Your Site in Minutes with Ready-to-Use Patterns
+Stop starting from a blank page. Our theme includes a variety of professionally designed sections (Patterns) built specifically for the needs of a car dealership. Just insert a pattern, replace the content with your own, and your page is ready to go. Key patterns include:
+
+* FAQ Section: Proactively answer common customer questions about financing, trade-ins, and vehicle warranties to build trust and save time.
+* Products & Services Layout: A dedicated page or section for you to organize and display your catalog in a professional and attractive way.
+* About Us: Share your dealership’s history, mission, and commitment to the community to create a personal connection with potential buyers.
+* Featured Deals: Highlight your latest promotions, special offers, or featured vehicles in a visually striking section designed to drive sales.
+* Why Choose Us: Clearly outline your key advantages—from an expert team to a unique sales process—and convince customers that you are the right choice.
 
 Translation-ready and multilingual support
 
