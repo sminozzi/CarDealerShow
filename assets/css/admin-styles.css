@@ -1,0 +1,112 @@
+/*
+ * Styles for the Car Dealer Show theme dashboard page.
+ */
+
+/* General Styles */
+h3 {
+  color: #0546AE;
+}
+
+/* Main Container */
+#car-dealer-show-logo {
+  margin-top: 10px;
+  padding-top: 0px;
+  margin-left: -7px;
+}
+
+/* 3 Steps Section */
+#car-dealer-show-steps3 {
+  margin-top: 20px;
+  min-height: 430px;
+  /* Adjusted based on content */
+  max-width: 100%;
+  border: 1px solid gray;
+  border-radius: 5px;
+  background: white;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  overflow: hidden;
+  /* To contain children */
+}
+
+/* Services and Help Section */
+#car-dealer-show-services3 {
+  margin-top: 15px;
+  min-height: 330px;
+  /* Adjusted based on content */
+  max-width: 100%;
+  border: 1px solid gray;
+  border-radius: 5px;
+  background: white;
+  margin-right: 15px;
+  overflow: hidden;
+  /* To contain children */
+}
+
+/* Shared Block Title Style */
+.car-dealer-show-block-title {
+  font-size: 30px;
+  max-width: 100% !important;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  background-color: #5b9dd9;
+  color: white;
+}
+
+/* Flex Container for Columns */
+.car-dealer-show-help-container1 {
+  display: flex;
+  font-size: 14px;
+}
+
+/* Individual Columns */
+.car-dealer-show-help-column {
+  flex: 1;
+  padding: 25px;
+  box-sizing: border-box;
+  text-align: left;
+  max-width: 33.33%;
+  /* Using percentage for better flex behavior */
+  overflow: hidden;
+  font-size: 16px;
+}
+
+.car-dealer-show-help-column-1 {
+  order: 1;
+}
+
+.car-dealer-show-help-column-2 {
+  order: 2;
+}
+
+.car-dealer-show-help-column-3 {
+  order: 3;
+}
+
+/* Primary Button Style */
+.button-primary {
+  margin-top: 5px !important;
+}
+
+
+/* Responsive Styles */
+@media screen and (max-width: 1100px) {
+  #car-dealer-show-logo img {
+    /* More specific selector */
+    max-width: 200px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .car-dealer-show-help-container1 {
+    display: block;
+    /* Stacks columns */
+  }
+
+  .car-dealer-show-help-column {
+    max-width: 100% !important;
+    /* Allow columns to take full width */
+    min-width: 100%;
+  }
+}

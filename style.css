@@ -1,0 +1,356 @@
+/*
+Theme Name: Car Dealer Show
+Theme URI: https://cardealerthemes.com/
+Author: sminozzi
+Author URI: https://billminozzi.com/
+Description: Car Dealer Show is a powerful and modern WordPress Block Theme crafted specifically for car dealerships, vehicle marketplaces, auto traders, used car lots, and other automotive-related businesses. Built with Full Site Editing (FSE) at its core, this theme gives you complete visual control over every part of your website—no coding required. It includes a variety of pre-designed block patterns, making it easy to build professional sections for services, FAQs, featured listings, and more. All colors, typography, and layouts can be customized directly in the Site Editor. The theme is fully responsive, retina-ready, and optimized for fast loading across all screen sizes—delivering a smooth and consistent experience on mobile, tablet, and desktop. CarDealer Show is compatible with Gutenberg, Elementor, and other popular page builders, giving you the freedom to design your site with your preferred tools. When paired with the optional (and free) Car Dealer plugin, you unlock powerful listing management features. Dealers gain full control over their inventory, with support for unlimited custom fields, vehicle categories, image galleries, and more. Advanced search filters offer a tailored experience for users to quickly find the cars they’re looking for. Whether you're an independent dealer or part of a larger automotive network, Car Dealer Show offers seamless Full Site Editing support, lightweight and SEO-optimized code, ready-to-use block patterns, and translation-ready support. Get your car dealership website online in minutes—with flexibility, performance, and style. For live demos, detailed documentation, video, support and more information, visit our official website: https://cardealerthemes.com/
+Version: 1.42
+Requires at least: 6.4
+Tested up to: 6.8
+Requires PHP: 7.4
+License: GPL v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: car-dealer-show
+Tags: full-site-editing, block-patterns, responsive-layout, translation-ready, e-commerce, portfolio, blog, custom-background, custom-logo, editor-style, one-column, wide-blocks
+*/
+/*-- 1.1 Top Bar --*/
+/* --- CSS CORRIGIDO PARA A BARRA SUPERIOR --- */
+
+/* Esta regra já existia e está OK. */
+.car-top-bar {
+    background: var(--wp--preset--color--topbar);
+    padding: 5px var(--wp--preset--spacing--40);
+    color: var(--wp--preset--color--base);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 
+ * NOVA REGRA (A CHAVE DA SOLUÇÃO): 
+ * Faz o container dos contatos alinhar os pares (ícone/texto) horizontalmente.
+*/
+/* --- CSS DEFINITIVO PARA A BARRA SUPERIOR --- */
+
+/* 1. Organiza os grupos de contato (Localização, Email, etc.) em uma linha */
+.top-bar-contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite quebrar a linha em telas muito pequenas */
+    align-items: center;
+    /* Alinha todos os grupos na vertical */
+    gap: 25px;
+    /* Define o espaço ENTRE os grupos de contato */
+}
+
+/* 2. Organiza o ícone e o texto DENTRO de cada grupo */
+.contact-item {
+    display: flex;
+    align-items: center;
+    /* A CHAVE: Alinha o ícone e o texto verticalmente */
+    gap: 8px;
+    /* Espaço entre o ícone e o texto */
+}
+
+/* 3. Remove margens de parágrafos que causam altura extra e desalinhamento */
+.contact-item p {
+    margin: 0;
+    padding: 0;
+}
+
+/*-- 1.2 Main Header Area --*/
+
+/* A regra original que já funciona, com UMA adição */
+.wp-block-column .car-container-logo {
+    background-color: var(--wp--preset--color--contrast-2);
+    min-height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* ADIÇÃO CRÍTICA: Transforma este elemento em um ponto de referência */
+    z-index: 2;
+    /* Garante que o conteúdo do logo fique na frente do efeito */
+}
+
+/* NOVA REGRA: Cria o efeito visual a partir do ponto de referência acima */
+.wp-block-column .car-container-logo::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    width: 10px;
+    background-color: white;
+    transform: skewX(-15deg);
+    transform-origin: left;
+    z-index: -1;
+    /* Coloca o efeito atrás do seu container pai, mas na frente do fundo da página */
+}
+
+/* A regra original do menu, sem a borda que não é mais necessária */
+.wp-block-column .car-container-menu {
+    background-color: var(--wp--preset--color--contrast-2);
+    min-height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* Adicionado para garantir o alinhamento vertical do menu */
+}
+
+/* REMOVIDO: A regra de borda abaixo foi removida para não conflitar com o novo efeito. */
+/* 
+.wp-block-column .car-container-menu {
+    border-left: 7px solid white;
+}
+*/
+
+/*-- 1.3 Navigation & Submenu --*/
+.wp-block-column.car-container-menu .wp-block-navigation-item>a {
+    color: var(--wp--preset--color--base);
+    text-decoration: none;
+}
+
+.wp-block-column.car-container-menu .wp-block-navigation-item>a:hover {
+    text-decoration: underline;
+}
+
+.wp-block-navigation__submenu-icon svg {
+    stroke: var(--wp--preset--color--base);
+}
+
+.wp-block-navigation .wp-block-navigation-item .wp-block-navigation__submenu-container {
+    background-color: var(--wp--preset--color--contrast-2);
+    padding: 10px;
+    border-top: 33px solid var(--wp--preset--color--topbar);
+    min-width: 200px;
+}
+
+.wp-block-navigation .wp-block-navigation-item .wp-block-navigation__submenu-container .wp-block-navigation-item__link {
+    color: var(--wp--preset--color--base);
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+.wp-block-navigation .wp-block-navigation-item .wp-block-navigation__submenu-container .wp-block-navigation-item__link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+}
+
+.wp-block-navigation .wp-block-navigation-item.has-child>.wp-block-navigation-item__link {
+    padding-right: 10px;
+}
+
+/*-- 1.4 Footer --*/
+/* The .car-footer class is kept for potential custom CSS by users. */
+.car-footer {
+    /* Background and text color are now defined in the block pattern */
+    padding: 10px;
+}
+
+/*
+ * Footer Heading Color Fix:
+ * Increased selector specificity to override global heading styles from theme.json.
+ */
+.car-footer h2.wp-block-heading.car-footer-heading {
+    color: var(--wp--preset--color--base);
+    /* 'base' is white in your dark variations */
+    font-size: 18px;
+}
+
+.car-footer .car-footer-copy a {
+    color: var(--wp--preset--color--colormenu);
+    /* Old name and weak selector */
+    text-decoration: underline;
+}
+
+.car-footer .car-footer-copy a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+/* Calendar Block */
+.wp-block-calendar table:where(:not(.has-text-color)) th {
+    background-color: var(--wp--preset--color--contrast);
+    color: var(--wp--preset--color--base);
+    border-color: var(--wp--preset--color--contrast);
+}
+
+.wp-block-calendar table:where(:not(.has-text-color)) td {
+    border-color: var(--wp--preset--color--contrast);
+}
+
+.wp-block-categories {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.wp-block-categories li {
+    margin-bottom: 0.5rem;
+}
+
+.wp-block-post-terms .wp-block-post-terms__prefix {
+    color: var(--wp--preset--color--contrast);
+}
+
+.wp-block-loginout input,
+.wp-block-post-comments-form textarea,
+.wp-block-post-comments-form input,
+.wp-block-search .wp-block-search__input {
+    border-radius: .33rem;
+}
+
+.wp-block-loginout input {
+    padding: calc(0.667em + 2px);
+    border: 1px solid #949494;
+}
+
+.wp-block-query-title span {
+    font-style: italic;
+}
+
+.wp-block-quote :where(p) {
+    margin-block-start: 0;
+    margin-block-end: calc(var(--wp--preset--spacing--10) + 0.5rem);
+}
+
+.wp-block-quote :where(:last-child) {
+    margin-block-end: 0;
+}
+
+.wp-block-quote.has-text-align-right.is-style-plain,
+.rtl .is-style-plain.wp-block-quote:not(.has-text-align-center):not(.has-text-align-left) {
+    border-width: 0 2px 0 0;
+    padding-left: calc(var(--wp--preset--spacing--20) + 0.5rem);
+    padding-right: calc(var(--wp--preset--spacing--20) + 0.5rem);
+}
+
+.wp-block-quote.has-text-align-left.is-style-plain,
+body:not(.rtl) .is-style-plain.wp-block-quote:not(.has-text-align-center):not(.has-text-align-right) {
+    border-width: 0 0 0 2px;
+    padding-left: calc(var(--wp--preset--spacing--20) + 0.5rem);
+    padding-right: calc(var(--wp--preset--spacing--20) + 0.5rem);
+}
+
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignwide):not(.alignfull) {
+    width: var(--wp--preset--spacing--60);
+}
+
+/*
+ * ========================================================================
+ * Accessibility: Focus Styles - GENERAL ADJUSTMENT
+ * ========================================================================
+ * Ensures a clear, visible outline for keyboard navigation on all focusable elements.
+ * Uses :focus-visible to apply styles only for keyboard focus, not mouse clicks.
+*/
+:where(*:focus-visible) {
+    /* Uses the theme's contrast color with a safe fallback to the default WordPress blue. */
+    outline: 2px solid var(--wp--preset--color--contrast, #0073aa);
+    outline-offset: 2px;
+}
+
+/*
+ * Removes focus outline for mouse users, as :focus-visible
+ * already handles keyboard users, improving visual experience.
+*/
+:where(*:focus):not(:focus-visible) {
+    outline: none;
+}
+
+/* ========================================================================
+ * END OF GENERAL ADJUSTMENT
+ * ========================================================================
+ */
+
+/* --- START OF SPECIFIC ADJUSTMENT FOR FOCUS STYLE IN BLACK HEADER (DEFAULT STYLE) --- */
+
+/* Overrides focus style for links and buttons within the navigation menu,
+ * specifically when the header or menu has the contrast-2 background (black in default style).
+ * This rule now includes the submenu toggle button.
+*/
+.car-container-menu .wp-block-navigation-item>a:focus-visible,
+.car-container-menu .wp-block-navigation .wp-block-navigation-item .wp-block-navigation__submenu-container .wp-block-navigation-item__link:focus-visible,
+.car-container-menu .wp-block-navigation-submenu__toggle:focus-visible {
+    /* Use a high-contrast color that stands out against black. E.g., white or vibrant yellow. */
+    outline: 2px solid var(--wp--preset--color--base, #FFFFFF);
+    /* Using 'base' which is white in your dark variations */
+    outline-offset: 3px;
+    /* Slightly increase offset for better visibility */
+    border-radius: 2px;
+    /* Optional: subtle rounded corners */
+}
+
+/* NEW: Corrected Focus style for the submenu icon (arrow SVG) with increased specificity */
+.car-container-menu .wp-block-navigation-submenu .wp-block-navigation__submenu-icon.wp-block-navigation-submenu__toggle:focus-visible svg {
+    stroke: var(--wp--preset--color--base, #FFFFFF) !important;
+    fill: var(--wp--preset--color--base, #FFFFFF) !important;
+}
+
+/* NEW: Focus style for social links (outline for the link container) - now uses correct class */
+.wp-block-social-links .wp-block-social-link-anchor:focus-visible {
+    /* ATUALIZADO: agora usa .wp-block-social-link-anchor */
+    outline: 2px solid var(--wp--preset--color--base, #FFFFFF);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+/* NEW: Color change for the social link SVG icon on focus - now uses correct class */
+.wp-block-social-links .wp-block-social-link-anchor:focus-visible svg {
+    /* ATUALIZADO: agora usa .wp-block-social-link-anchor */
+    stroke: var(--wp--preset--color--base, #FFFFFF) !important;
+    fill: var(--wp--preset--color--base, #FFFFFF) !important;
+}
+
+/* --- END OF SPECIFIC ADJUSTMENT --- */
+
+
+/*--------------------------------------------------------------
+# 3.0 Responsive Styles
+--------------------------------------------------------------*/
+@media (max-width: 900px) {
+    .car-top-bar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .wp-block-column.car-container-logo,
+    .wp-block-column.car-container-menu {
+        min-height: auto;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .wp-block-column.car-container-menu .wp-block-navigation {
+        margin: auto;
+    }
+
+    html.has-modal-open .wp-site-blocks::before {
+        background-color: transparent;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .wp-block-navigation__responsive-dialog {
+        background-color: var(--wp--preset--color--contrast-2);
+        /* Fixed: Changed from backmenu */
+        padding: 10px;
+    }
+
+    .wp-block-navigation__responsive-dialog .wp-block-navigation__responsive-container-close svg {
+        fill: var(--wp--preset--color--base);
+        /* Fixed: Changed from colormenu */
+    }
+
+    .wp-block-navigation__responsive-container-open svg {
+        fill: var(--wp--preset--color--base);
+        /* Fixed: Changed from colormenu */
+    }
+
+    .wp-block-navigation__responsive-dialog .wp-block-navigation-item a {
+        color: var(--wp--preset--color--base);
+        /* Fixed: Changed from colormenu */
+        font-size: 1.5rem;
+    }
+}

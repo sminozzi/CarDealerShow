@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.6/theme.json",
+	"version": 2,
+	"title": "Green",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"color": "#FFFFFF",
+					"name": "Base",
+					"slug": "base"
+				},
+				{
+					"color": "#76af80",
+					"name": "Base / Two",
+					"slug": "base-2"
+				},
+				{
+					"color": "#434343",
+					"name": "Contrast",
+					"slug": "contrast"
+				},
+				{
+					"color": "#075414",
+					"name": "Contrast / 2",
+					"slug": "contrast-2"
+				},
+				{
+					"color": "#3e3e3e",
+					"name": "Top Bar",
+					"slug": "topbar"
+				}
+			]
+		}
+	}
+}

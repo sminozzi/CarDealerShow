@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * Title: Default Header
+ * Slug: car-dealer-show/header-default
+ * Categories: car-dealer-show/page
+ * Block Types: core/template-part/header
+ * Keywords: header, top bar, navigation
+ */
+?><!-- wp:group {"tagName":"header","align":"full","style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"}} -->
+<header class="wp-block-group alignfull"><!-- wp:group {"align":"full","className":"car-top-bar","backgroundColor":"topbar","layout":{"type":"flex","justifyContent":"space-between","verticalAlignment":"center"}} -->
+    <div class="wp-block-group alignfull car-top-bar has-topbar-background-color has-background"><!-- wp:paragraph {"placeholder":"seu-email@dominio.com","textColor":"base"} -->
+        <p class="has-base-color has-text-color">seu-email@dominio.com</p>
+        <!-- /wp:paragraph --><!-- wp:social-links {"iconColor":"base","iconColorValue":"#FFFFFF","size":"has-small-icon-size","className":"is-style-logos-only"} -->
+        <ul class="wp-block-social-links has-small-icon-size has-icon-color is-style-logos-only"><!-- wp:social-link {"url":"#","service":"facebook"} /--><!-- wp:social-link {"url":"#","service":"twitter"} /--><!-- wp:social-link {"url":"#","service":"youtube"} /--><!-- wp:social-link {"url":"#","service":"instagram"} /--></ul>
+        <!-- /wp:social-links -->
+    </div>
+    <!-- /wp:group -->
+
+    <!-- Grupo principal com cor de fundo única e uma classe para o CSS -->
+    <!-- wp:group {"align":"full","backgroundColor":"contrast-2","className":"car-main-header"} -->
+    <div class="wp-block-group alignfull has-contrast-2-background-color has-background car-main-header">
+        <!-- Bloco de colunas para estrutura -->
+        <!-- wp:columns {"verticalAlignment":"center","align":"wide"} -->
+        <div class="wp-block-columns alignwide are-vertically-aligned-center">
+            <!-- Coluna Esquerda -->
+            <!-- wp:column {"width":"30%"} -->
+            <div class="wp-block-column" style="flex-basis:30%"><!-- wp:site-logo {"width":200,"shouldSyncIcon":true} /--></div>
+            <!-- /wp:column -->
+
+            <!-- Coluna Direita com classe para o menu -->
+            <!-- wp:column {"width":"70%","className":"car-container-menu"} -->
+            <div class="wp-block-column car-container-menu" style="flex-basis:70%"><!-- wp:navigation {"ref":2602,"textColor":"base","layout":{"type":"flex","justifyContent":"right"}} /--></div>
+            <!-- /wp:column -->
+        </div>
+        <!-- /wp:columns -->
+    </div>
+    <!-- /wp:group -->
+</header>
+<!-- /wp:group -->

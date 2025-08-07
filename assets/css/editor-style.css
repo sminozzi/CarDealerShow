@@ -1,0 +1,102 @@
+/*
+ * Editor Styles
+ *
+ * This file contains styles that are specifically applied within the
+ * Block Editor (Gutenberg) to ensure the backend editing experience
+ * closely matches the frontend appearance of the theme.
+ *
+ * These styles are loaded via `add_editor_style()` in `functions.php`.
+ */
+
+/*--------------------------------------------------------------
+# Header and Top Bar
+--------------------------------------------------------------*/
+.wp-block-group.car-top-bar {
+    background: var(--wp--preset--color--topbar);
+    padding: 10px;
+}
+
+/* 
+ * Combined and cleaned up styles for header columns.
+ * The clip-path creates a slanted edge effect.
+ */
+.wp-block-column.car-container-logo {
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+    display: flex;
+    background: var(--wp--preset--color--backmenu);
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.wp-block-column.car-container-menu {
+    display: flex;
+    background: var(--wp--preset--color--backmenu);
+    color: var(--wp--preset--color--colormenu);
+    height: 100px;
+    padding: 10px;
+    justify-content: center;
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.wp-block-group.car-footer {
+    background: var(--wp--preset--color--backmenu);
+    color: var(--wp--preset--color--colormenu);
+    padding: 10px;
+}
+
+.wp-block-heading.car-footer-heading {
+    color: var(--wp--preset--color--colormenu);
+    font-size: 18px;
+    /* Removed redundant background color */
+}
+
+
+.car-footer-copy {
+    color: var(--wp--preset--color--colormenu);
+    font-size: 18px;
+    /* Removed redundant background color */
+}
+
+.car-footer-copy a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.car-footer-copy a:hover {
+    color: var(--wp--preset--color--link-hover);
+}
+
+.car-dealer-show-footer-tagline {
+    margin-top: 10px;
+    color: var(--wp--preset--color--colormenu);
+    font-size: 18px;
+    /* Removed redundant background color */
+}
+
+.car-dealer-show-footer-first {
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+
+/*--------------------------------------------------------------
+# Shape Effects
+--------------------------------------------------------------*/
+.wp-block-column.car-container-left-of-menu {
+    clip-path: polygon(33% 0, 100% 0, 100% 100%, 0 100%);
+    display: flex;
+    background: var(--wp--preset--color--backmenu);
+    height: 100px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.car-column-shape-effect {
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+    background-color: var(--wp--preset--color--backmenu);
+}
